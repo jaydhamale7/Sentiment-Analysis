@@ -4,6 +4,7 @@ import numpy as np
 from bs4 import BeautifulSoup
 import unicodedata
 from nltk.corpus import stopwords
+nltk.download('stopwords')
 from nltk.stem import PorterStemmer
 import re
 import streamlit as st
