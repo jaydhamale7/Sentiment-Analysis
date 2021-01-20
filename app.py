@@ -12,6 +12,7 @@ from tensorflow.keras.models import Sequential, load_model
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.preprocessing.text import one_hot
 stop_words = set(stopwords.words('english')) 
+stop_words.remove("not")
 import pickle
 pickle_in = open("tokenizer.pickle","rb")
 tokenizer = pickle.load(pickle_in)
@@ -40,7 +41,7 @@ if st.button('Predict'):
     padded = pad_sequences(tokenized_text,maxlen=20)
     pred = model.predict(padded)[0]
 #     st.write(pred)
-    if pred[1] >= 0.6:
+    if pred[1] >= 0.5:
         st.write("### Negative")
     else:
         st.write("### Positive")
