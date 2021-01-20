@@ -39,7 +39,7 @@ if st.button('Predict'):
     padded = pad_sequences(tokenized_text,maxlen=20)
     pred = model.predict(padded)[0]
 #     st.write(pred)
-    if pred[1] >= 0.5:
+    if pred[1] >= 0.6:
         st.write("### Negative")
     else:
         st.write("### Positive")
