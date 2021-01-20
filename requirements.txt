@@ -4,4 +4,5 @@ nltk
 beautifulsoup4
 sklearn
 tensorflow
+lxml
 streamlit
