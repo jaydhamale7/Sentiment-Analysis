@@ -31,7 +31,7 @@ def preprocess(x):
     return x
 
 st.write('# Sentiment Analysis App')
-txt = st.text_input("Enter text")
+txt = st.text_area("Enter text")
 if st.button('Predict'):
  
     cleaned_text = preprocess(txt)
